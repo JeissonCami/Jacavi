@@ -1,0 +1,33 @@
+body {
+  background-color: black;
+}
+.container {
+  text-align: center;
+}
+.title {
+  text-align: center;
+  font-size: 72px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.image-container {
+  display: inline-block;
+  margin: 20px;
+}
+a {
+  text-decoration: none;
+}
+
+.caption {
+  opacity: 0;
+  transition: opacity 0.5s;
+  font-size: 48px; /* Cambia el tamaño de la letra a 24 píxeles */
+  color: white; /* Cambia el color del texto a blanco */
+  
+}
+
+.image-container:hover .caption {
+  opacity: 1;
+}
