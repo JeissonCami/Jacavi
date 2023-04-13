@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat en línea</title>
+  <link rel="stylesheet" href="styles6.css">
+</head>
+<body>
+  <header>
+    <h1>Chat en línea</h1>
+    <nav>
+      <ul>
+        <li><a href="secciontrueque.html">Instrumentos</a></li>
+        <li><a href="camisetasm.html">Lecciones</a></li>
+        <li><a href="pantalonesm.html">Comunidad</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="chat-container">
+      <div class="chat-messages">
+        <div class="message">
+          <span class="username">Usuario1:</span>
+          <span class="text">Hola, ¿cómo están?</span>
+        </div>
+        <div class="message">
+          <span class="username">Usuario2:</span>
+          <span class="text">Bien, gracias. ¿Y tú?</span>
+        </div>
+      </div>
+      <form class="chat-form">
+        <input type="text" placeholder="Escribe tu mensaje aquí">
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    const chatForm = document.querySelector('.chat-form');
+    const chatInput = document.querySelector('.chat-form input');
+    const chatMessages = document.querySelector('.chat-messages');
+
+    chatForm.addEventListener('submit', event => {
+      event.preventDefault(); // Evita que se recargue la página al enviar el formulario
+
+      const message = chatInput.value.trim(); // Obtiene el mensaje y lo limpia
+      if (message) {
+        const newMessage = document.createElement('div'); // Crea un nuevo elemento de mensaje
+        newMessage.classList.add('message');
+        newMessage.innerHTML = `
+          <span class="username">Usuario:</span>
+          <span class="text">${message}</span>
+        `;
+        chatMessages.appendChild(newMessage); // Agrega el nuevo mensaje al cuadro de chat
+        chatInput.value = ''; // Limpia el campo de entrada de texto
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+body {
+  background-color: black; /* color de fondo */
+  background-image: linear-gradient(to bottom right, #da3734, #1d2431); /* gradiente de colores */
+  font-family: 'Montserrat', sans-serif; /* fuente */
+}
+
+.container {
+  margin: auto;
+  max-width: 600px;
+  text-align: center;
+  padding: 40px;
+  background-color: red; /* fondo semi-transparente */
+  border-radius: 20px;
+  box-shadow: 0 0 20px yellow; /* sombra */
+}
+
+.title {
+  font-size: 48px;
+  color: yellow; /* color del título */
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  margin: 0;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-container figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* fondo semi-transparente */
+  color: yellow; /* color del texto */
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.image-container:hover img {
+  transform: scale(1.1); /* aumenta el tamaño de la imagen al pasar el cursor por encima */
+}
+
+.image-container:hover figcaption {
+  opacity: 1; /* muestra el texto al pasar el cursor por encima */
+}
+
+button {
+  display: block;
+  margin: 40px auto;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: yellow; /* color del texto */
+  background-color: black; /* color de fondo */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+button:hover {
+  background-color: green; /* cambia el color de fondo al pasar el cursor por encima */
+}

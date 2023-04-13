@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>App instrumentos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Sound Wave</h1> 
+    <a href="#" class="image-container">
+      <img src="C:\Users\Jeisson\Documents\zcositas\ztecnolo\t-ropa\imagenes\logo1.png" alt="Imagen de app" width="500" height="600">
+      <figcaption class="caption">MÚSICA</figcaption>
+    </a>
+    <audio id="myAudio">
+      <source src="C:\Users\Jeisson\Documents\zcositas\ztecnolo\t-ropa\imagenes\guitarra.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+      var audio = document.getElementById("myAudio");
+      var img = document.querySelector(".image-container img");
+      img.addEventListener("click", function() {
+        audio.play();
+      });
+    </script>
+    <button onclick="window.location.href='secciontrueque.html'">Entrar</button>
+  </div>
+</body>
+</html>
